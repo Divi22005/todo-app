@@ -3,7 +3,7 @@ import todoModel from '../Models/todoModel';
 
 const todoRoutes = express.Router();
 
-todoRouters.post('/new', async (req, res) => {
+todoRoutes.post('/new', async (req, res) => {
         const { title, description } = req.body;
         const result = await todoModel.insertOne({ title, description });
         return res.json(result);
