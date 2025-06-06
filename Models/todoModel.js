@@ -5,4 +5,4 @@ const  todoSchema = mongoose.Schema({
     createdAt: { type: Date,default: Date.now },
 });
 
-export default mongoose.model("Todo", todoSchema);
+export default mongoose.model("To-do", todoSchema);
