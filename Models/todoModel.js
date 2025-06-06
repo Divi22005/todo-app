@@ -1,13 +1,7 @@
 import mongoose from "mongoose";
-const  todoSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
+const  todoSchema = mongoose.Schema({
+    title: { type: String },
+    description: { type: String },
     completed: {
         type: Boolean,
         default: false,
