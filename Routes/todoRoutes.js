@@ -1,9 +1,9 @@
 import express from 'express';
-import todoModel from '../Models/todoModel';
+import todoModel from '../Models/todoModel.js';
 
-const todoRouter = express.Router();
+const todoRoutes = express.Router();
 
-todoRouter.post('/new', async (req, res) => {
+todoRoutes.post('/new', async (req, res) => {
         const { title, description } = req.body;
         const result = await todoModel.insertOne({ title, description });
         return res.json(result);
@@ -14,4 +14,4 @@ todoRoutes.get('/all', async (req, res) => {
         return res.json(result);
 });
 
-export default todoRouter;
+export default todoRoutes;
